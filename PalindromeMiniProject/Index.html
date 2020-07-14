@@ -75,12 +75,45 @@
             </div>
         </div>
     </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col text-center h1">
+                PALINDROME EXERCISE
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-2">
+                <input id="palInput" type="text" placeholder="Enter Word" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <button id="btnPal" class="btn btn-primary btnWide">Run Palindrome</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p id="palOutput" class="btnWide"></p>
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    <script>
+        $("#btnPal").on("click", function () {
+            let word = $("#palInput").val().toLowerCase();
+            let revWord = word.split("").reverse().join("");
+            if (word === revWord) {
+                $("#palOutput").text(`${word} reversed is ${revWord} therefore it is a palindrome`);
+            }
+            else {
+                $("#palOutput").text(`${word} reversed is ${revWord} therefore it is NOT a palindrome`);
+            }
+        });
+    </script>
 </body>
 
 </html>
