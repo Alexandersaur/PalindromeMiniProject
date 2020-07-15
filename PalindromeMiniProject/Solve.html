@@ -26,12 +26,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="/Index.html">
                             Home
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/Solve.html">Solve</a>
                     </li>
                     <li class="nav-item">
@@ -43,20 +43,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="//jeremysteward.com">Portfolio</a>
                     </li>
-                    <<!--li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
                     </li>-->
                 </ul>
-            </div>
-            <div class="dropdown">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                    Other Mini Projects
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="//unruffled-roentgen-8c7094.netlify.app">Taco Cat</a>
-                    <a class="dropdown-item" href="//kind-dubinsky-66af97.netlify.app">Fizz Buzz</a>
-                    <a class="dropdown-item" href="//vigorous-jepsen-1d49b1.netlify.app">Sunset Hills</a>
-                    <a class="dropdown-item" href="//inspiring-spence-f007c7.netlify.app">Sum of all fears</a>
+                <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Other Mini Projects
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="//unruffled-roentgen-8c7094.netlify.app">Taco Cat</a>
+                        <a class="dropdown-item" href="//kind-dubinsky-66af97.netlify.app">Fizz Buzz</a>
+                        <a class="dropdown-item" href="//vigorous-jepsen-1d49b1.netlify.app">Sunset Hills</a>
+                        <a class="dropdown-item" href="//inspiring-spence-f007c7.netlify.app">Sum of all fears</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,21 +66,54 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">Palindrome</h1>
-                <p class="lead">This page will display your JS exercise</p>
+                <h1 class="mt-5">Palindrome (Taco Cat)</h1>
+                <p class="lead">You can customize the template colors</p>
                 <ul class="list-unstyled">
-                    <li>The Javascript Exercise</li>
-                    <li>Is placed on this page</li>
+                    <li>This page is for a description of the Javascript exercise</li>
+                    <li>You should include information about what the code does</li>
                 </ul>
             </div>
         </div>
     </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col text-center h1">
+                PALINDROME EXERCISE
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-2">
+                <input id="palInput" type="text" placeholder="Enter Word" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <button id="btnPal" class="btn btn-primary btnWide">Run Palindrome</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <p id="palOutput" class="btnWide"></p>
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    <script>
+        $("#btnPal").on("click", function () {
+            let word = $("#palInput").val().toLowerCase();
+            let revWord = word.split("").reverse().join("");
+            if (word === revWord) {
+                $("#palOutput").text(`${word} reversed is ${revWord} therefore it is a palindrome`);
+            }
+            else {
+                $("#palOutput").text(`${word} reversed is ${revWord} therefore it is NOT a palindrome`);
+            }
+        });
+    </script>
 </body>
 
 </html>
