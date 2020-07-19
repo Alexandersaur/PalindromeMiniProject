@@ -21,6 +21,19 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <style>
+        .jumbotron {
+            background-image: url('projart6.jpg');
+            background-size: cover;
+            border-bottom: 6px solid black;
+            font: black;
+            font-weight: 800;
+            font-size: 50px;
+            text-transform: uppercase;
+            text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 10px 23px rgba(0,0,0,0.1);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -58,8 +71,8 @@
                 </ul>
             </div>
             <div class="dropdown">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                    Other Mini Projects
+                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                    Mini Projects
                 </button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="//jeremysteward-cf-1.netlify.app/">Taco Cat</a>
@@ -72,11 +85,19 @@
     </nav>
 
     <!-- Page Content -->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-white text-center">
+            <h1>Taco Cat</h1>
+            <p><!--Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.--></p>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="mt-5">TACO CAT</h1>
-                <p class="lead">Determining whether or not a string is a palindrome.</p>
+                <h1 class="mt-5">Is the string a palindrome?</h1>
+                <!--<p class="lead">Determining whether or not a string is a palindrome.</p>-->
                 <ul class="list-unstyled">
                     <li>A palindrome is a word, phrase, number or sequence of words that reads the same backward as forward.</li>
                     <li>In order to determine whether or not the string of entered characters is a palindrome, we must first clean it up by making everything lowercase and removing extraneous characters.</li>
