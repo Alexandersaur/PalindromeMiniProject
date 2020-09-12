@@ -74,6 +74,8 @@
     <Content Include="Index.html" />
     <Content Include="prism %281%29.css" />
     <Content Include="prism %281%29.js" />
+    <Content Include="prism %282%29.css" />
+    <Content Include="prism %282%29.js" />
     <Content Include="projart5.jpg" />
     <Content Include="projart6.jpg" />
     <Content Include="Solve.html" />
